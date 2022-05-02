@@ -67,13 +67,17 @@
 # The Dark Knight Rises  Joseph Gordon-Levitt  John Blake
 # The Dark Knight Rises  Anne Hathaway         Selina Kyle
 
+# Turn column mode on but headers off
+#.mode columns
+#.headers off
+
 # Delete existing data, so you'll start fresh each time this script is run.
 # Use `Model.destroy_all` code.
 # TODO!
 Studio.destroy_all
-#Movie.destroy_all
-#Actor.destroy_all
-#Role.destroy_all
+Movie.destroy_all
+Actor.destroy_all
+Role.destroy_all
 
 # Generate models and tables, according to the domain model.
 # TODO!
@@ -257,18 +261,29 @@ new_role9.save
 
 
 # Prints a header for the movies output
-#puts "Movies"
-#puts "======"
-#puts ""
+puts "Movies"
+puts "======"
+puts ""
 
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
+movie = Movie.find_by({ "title" => "Batman Begins" })
+puts movie.inspect
+
+movie = Movie.find_by({ "title" => "The Dark Knight" })
+puts movie.inspect
+
+movie = Movie.find_by({ "title" => "The Dark Knight Rises" })
+puts movie.inspect
+ #"year_released" => "2005", "rated" => "PG-13", "studio_id" => ["id"] })
+ #puts "#{movie["title", "year_released", "rated", "studio_id"]}"
 
 # Prints a header for the cast output
-#puts ""
-#puts "Top Cast"
-#puts "========"
-#puts ""
+puts ""
+puts "Top Cast"
+puts "========"
+puts ""
+
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
