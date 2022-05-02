@@ -154,19 +154,19 @@ new_actor7["name"] = "Maggie Gyllenhaal"
 new_actor7.save
 puts "There are #{Actor.all.count} actors."
 
-new_actor7 = Actor.new
-new_actor7["name"] = "Tom Hardy"
-new_actor7.save
-puts "There are #{Actor.all.count} actors."
-
 new_actor8 = Actor.new
-new_actor8["name"] = "Joseph Gordon-Levitt"
+new_actor8["name"] = "Tom Hardy"
 new_actor8.save
 puts "There are #{Actor.all.count} actors."
 
 new_actor9 = Actor.new
-new_actor9["name"] = "Anne Hathaway"
+new_actor9["name"] = "Joseph Gordon-Levitt"
 new_actor9.save
+puts "There are #{Actor.all.count} actors."
+
+new_actor10 = Actor.new
+new_actor10["name"] = "Anne Hathaway"
+new_actor10.save
 puts "There are #{Actor.all.count} actors."
 
 #insert role data
