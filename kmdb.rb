@@ -86,16 +86,18 @@ Studio.destroy_all
 new_studio = Studio.new
 new_studio["name"] = "Warner Bros."
 new_studio.save
-puts "There are #{Studio.all.count} studios."
+Warner_Bros = Studio.find_by({"name" => "Warner Bros."})
+#puts "There are #{Studio.all.count} studios."
 
 #insert movie data
 new_movie = Movie.new
 new_movie["title"] = "Batman Begins"
 new_movie["year_released"] = "2005"
 new_movie["rated"] = "PG-13"
-new_movie["studio_id"] = 
+new_movie["studio_id"] = Warner_Bros["id"]
 new_movie.save
-puts "There are #{Movie.all.count} movies."
+Batman_Begins = Movie.find_by({"title" => "Batman Begins"})
+#puts "There are #{Movie.all.count} movies."
 
 new_movie1 = Movie.new
 new_movie1["title"] = "The Dark Knight"
@@ -103,7 +105,8 @@ new_movie1["year_released"] = "2008"
 new_movie1["rated"] = "PG-13"
 new_movie1["studio_id"] = 
 new_movie1.save
-puts "There are #{Movie.all.count} movies."
+The_Dark_Knight = Movie.find_by({"title" => "The Dark Knight"})
+#puts "There are #{Movie.all.count} movies."
 
 new_movie2 = Movie.new
 new_movie2["title"] = "The Dark Knight Rises"
@@ -111,63 +114,75 @@ new_movie2["year_released"] = "2012"
 new_movie2["rated"] = "PG-13"
 new_movie2["studio_id"] = 
 new_movie2.save
-puts "There are #{Movie.all.count} movies."
+The_Dark_Knight_Rises = Movie.find_by({"title" => "The Dark Knight Rises"})
+#puts "There are #{Movie.all.count} movies."
 
 #insert actor data
 new_actor = Actor.new
 new_actor["name"] = "Christian Bale"
 new_actor.save
-puts "There are #{Actor.all.count} actors."
+Christian_Bale = Actor.find_by({"name" => "Christian Bale"})
+#puts "There are #{Actor.all.count} actors."
 
 new_actor1 = Actor.new
 new_actor1["name"] = "Michael Caine"
 new_actor1.save
-puts "There are #{Actor.all.count} actors."
+Michael_Caine = Actor.find_by({"name" => "Michael Caine"})
+#puts "There are #{Actor.all.count} actors."
 
 new_actor2 = Actor.new
 new_actor2["name"] = "Liam Neeson"
 new_actor2.save
-puts "There are #{Actor.all.count} actors."
+Liam_Neeson = Actor.find_by({"name" => "Liam Neeson"})
+#puts "There are #{Actor.all.count} actors."
 
 new_actor3 = Actor.new
 new_actor3["name"] = "Katie Holmes"
 new_actor3.save
-puts "There are #{Actor.all.count} actors."
+Katie_Holmes = Actor.find_by({"name" => "Katie Holmes"})
+#puts "There are #{Actor.all.count} actors."
 
 new_actor4 = Actor.new
 new_actor4["name"] = "Gary Oldman"
 new_actor4.save
-puts "There are #{Actor.all.count} actors."
+Gary_Oldman = Actor.find_by({"name" => "Gary Oldman"})
+#puts "There are #{Actor.all.count} actors."
 
 new_actor5 = Actor.new
 new_actor5["name"] = "Heath Ledger"
 new_actor5.save
-puts "There are #{Actor.all.count} actors."
+Heath_Ledger = Actor.find_by({"name" => "Heath Ledger"})
+#puts "There are #{Actor.all.count} actors."
 
 new_actor6 = Actor.new
 new_actor6["name"] = "Aaron Eckhart"
 new_actor6.save
-puts "There are #{Actor.all.count} actors."
+Aaron_Eckhart = Actor.find_by({"name" => "Aaron Eckhart"})
+#puts "There are #{Actor.all.count} actors."
 
 new_actor7 = Actor.new
 new_actor7["name"] = "Maggie Gyllenhaal"
 new_actor7.save
-puts "There are #{Actor.all.count} actors."
+Maggie_Gyllenhaal = Actor.find_by({"name" => "Maggie Gyllenhaal"})
+#puts "There are #{Actor.all.count} actors."
 
 new_actor8 = Actor.new
 new_actor8["name"] = "Tom Hardy"
 new_actor8.save
-puts "There are #{Actor.all.count} actors."
+Tom_Hardy = Actor.find_by({"name" => "Tom Hardy"})
+#puts "There are #{Actor.all.count} actors."
 
 new_actor9 = Actor.new
 new_actor9["name"] = "Joseph Gordon-Levitt"
 new_actor9.save
-puts "There are #{Actor.all.count} actors."
+Joseph_Gordon_Levitt = Actor.find_by({"name" => "Joseph Gordon-Levitt"})
+#puts "There are #{Actor.all.count} actors."
 
 new_actor10 = Actor.new
 new_actor10["name"] = "Anne Hathaway"
 new_actor10.save
-puts "There are #{Actor.all.count} actors."
+Anne_Hathaway = Actor.find_by({"name" => "Anne Hathaway"})
+#puts "There are #{Actor.all.count} actors."
 
 #insert role data
 new_role = Role.new
