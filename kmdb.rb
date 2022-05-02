@@ -103,7 +103,7 @@ new_movie1 = Movie.new
 new_movie1["title"] = "The Dark Knight"
 new_movie1["year_released"] = "2008"
 new_movie1["rated"] = "PG-13"
-new_movie1["studio_id"] = 
+new_movie1["studio_id"] = Warner_Bros["id"]
 new_movie1.save
 The_Dark_Knight = Movie.find_by({"title" => "The Dark Knight"})
 #puts "There are #{Movie.all.count} movies."
@@ -112,7 +112,7 @@ new_movie2 = Movie.new
 new_movie2["title"] = "The Dark Knight Rises"
 new_movie2["year_released"] = "2012"
 new_movie2["rated"] = "PG-13"
-new_movie2["studio_id"] = 
+new_movie2["studio_id"] = Warner_Bros["id"]
 new_movie2.save
 The_Dark_Knight_Rises = Movie.find_by({"title" => "The Dark Knight Rises"})
 #puts "There are #{Movie.all.count} movies."
