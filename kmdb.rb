@@ -267,16 +267,17 @@ puts ""
 
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
-movie = Movie.find_by({ "title" => "Batman Begins" })
-puts movie.inspect
+movies = Movie.all
+for movie in movies
+    puts "#{movie["title"]} #{movie["year_released"]} #{movie["rated"]} #{movie["studio_id"]}"
+end
 
-movie = Movie.find_by({ "title" => "The Dark Knight" })
-puts movie.inspect
-
-movie = Movie.find_by({ "title" => "The Dark Knight Rises" })
-puts movie.inspect
- #"year_released" => "2005", "rated" => "PG-13", "studio_id" => ["id"] })
- #puts "#{movie["title", "year_released", "rated", "studio_id"]}"
+#movie = Movie.find_by({ "title" => "Batman Begins" })
+#puts "#{movie["title"]} #{movie["year_released"]} #{movie["rated"]} #{movie["studio_id"]}"
+#movie = Movie.find_by({ "title" => "The Dark Knight" })
+#puts "#{movie["title"]} #{movie["year_released"]} #{movie["rated"]} #{movie["studio_id"]}"
+#movie = Movie.find_by({ "title" => "The Dark Knight Rises" })
+#puts "#{movie["title"]} #{movie["year_released"]} #{movie["rated"]} #{movie["studio_id"]}"
 
 # Prints a header for the cast output
 puts ""
@@ -286,21 +287,19 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
-movie = Movie.find_by({ "title" => "Batman Begins"})
-movie_role = Role.find_by({"movie_id" => movie["id"]})
-puts movie_role.inspect
+roles = Role.all
+for role in roles
+    puts "#{role["movie_id"]} #{role["actor_id"]} #{role["character_name"]}"
+end
 
-movie = Movie.find_by({ "title" => "The Dark Knight"})
-movie_role = Role.find_by({"movie_id" => movie["id"]})
-puts movie_role.inspect
+#movie = Movie.find_by({ "title" => "Batman Begins"})
+#movie_role = Role.find_by({"movie_id" => movie["id"]})
+#puts movie_role.inspect
 
-movie = Movie.find_by({ "title" => "The Dark Knight Rises"})
-movie_role = Role.find_by({"movie_id" => movie["id"]})
-puts movie_role.inspect
+#movie = Movie.find_by({ "title" => "The Dark Knight"})
+#movie_role = Role.find_by({"movie_id" => movie["id"]})
+#puts movie_role.inspect
 
-
-#for role in movie_role
-#    actor = role["name"]
-#    character = role["character_name"]
-#    puts "#{name} #{character_name}"
-#end
+#movie = Movie.find_by({ "title" => "The Dark Knight Rises"})
+#movie_role = Role.find_by({"movie_id" => movie["id"]})
+#puts movie_role.inspect
