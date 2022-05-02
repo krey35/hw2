@@ -269,9 +269,12 @@ puts ""
 # TODO!
 movies = Movie.all
 for movie in movies
-    puts "#{movie["title"]} #{movie["year_released"]} #{movie["rated"]} #{movie["studio_id"]}"
+    studio = Studio.find_by({"id" => movie["studio_id"]})
+   # puts studio.inspect
+    puts "#{movie["title"]} #{movie["year_released"]} #{movie["rated"]} #{studio["name"]}"
 end
 
+#KEEPING AS A REFERNCE
 #movie = Movie.find_by({ "title" => "Batman Begins" })
 #puts "#{movie["title"]} #{movie["year_released"]} #{movie["rated"]} #{movie["studio_id"]}"
 #movie = Movie.find_by({ "title" => "The Dark Knight" })
@@ -289,17 +292,20 @@ puts ""
 # TODO!
 roles = Role.all
 for role in roles
-    puts "#{role["movie_id"]} #{role["actor_id"]} #{role["character_name"]}"
+    movie = Movie.find_by({"id" => role["movie_id"]})
+    #puts movie.inspect
+    actor = Actor.find_by({"id" => role["actor_id"]})
+    #puts actor.inspect
+    puts "#{movie["title"]} #{actor["name"]} #{role["character_name"]}"
 end
 
+#KEEPING AS A REFERENCE
 #movie = Movie.find_by({ "title" => "Batman Begins"})
 #movie_role = Role.find_by({"movie_id" => movie["id"]})
 #puts movie_role.inspect
-
 #movie = Movie.find_by({ "title" => "The Dark Knight"})
 #movie_role = Role.find_by({"movie_id" => movie["id"]})
 #puts movie_role.inspect
-
 #movie = Movie.find_by({ "title" => "The Dark Knight Rises"})
 #movie_role = Role.find_by({"movie_id" => movie["id"]})
 #puts movie_role.inspect
