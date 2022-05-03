@@ -226,41 +226,77 @@ new_role4.save
 
 new_role5 = Role.new
 new_role5["movie_id"] = The_Dark_Knight["id"]
-new_role5["actor_id"] = Heath_Ledger["id"]
-new_role5["character_name"] = "Joker"
+new_role5["actor_id"] = Christian_Bale["id"]
+new_role5["character_name"] = "Bruce Wayne"
 new_role5.save
 #puts "There are #{Role.all.count} roles."
 
 new_role6 = Role.new
 new_role6["movie_id"] = The_Dark_Knight["id"]
-new_role6["actor_id"] = Aaron_Eckhart["id"]
-new_role6["character_name"] = "Harvey Dent"
+new_role6["actor_id"] = Heath_Ledger["id"]
+new_role6["character_name"] = "Joker"
 new_role6.save
 #puts "There are #{Role.all.count} roles."
 
 new_role7 = Role.new
-new_role7["movie_id"] = The_Dark_Knight_Rises["id"]
-new_role7["actor_id"] = Tom_Hardy["id"]
-new_role7["character_name"] = "Bane"
+new_role7["movie_id"] = The_Dark_Knight["id"]
+new_role7["actor_id"] = Aaron_Eckhart["id"]
+new_role7["character_name"] = "Harvey Dent"
 new_role7.save
 #puts "There are #{Role.all.count} roles."
 
 new_role8 = Role.new
-new_role8["movie_id"] = The_Dark_Knight_Rises["id"]
-new_role8["actor_id"] = Joseph_Gordon_Levitt["id"]
-new_role8["character_name"] = "John Blake"
+new_role8["movie_id"] = The_Dark_Knight["id"]
+new_role8["actor_id"] = Michael_Caine["id"]
+new_role8["character_name"] = "Alfred"
 new_role8.save
 #puts "There are #{Role.all.count} roles."
 
 new_role9 = Role.new
-new_role9["movie_id"] = The_Dark_Knight_Rises["id"]
-new_role9["actor_id"] = Anne_Hathaway["id"]
-new_role9["character_name"] = "Selina Kyle"
+new_role9["movie_id"] = The_Dark_Knight["id"]
+new_role9["actor_id"] = Maggie_Gyllenhaal["id"]
+new_role9["character_name"] = "Rachel Dawes"
 new_role9.save
 #puts "There are #{Role.all.count} roles."
 
+new_role10 = Role.new
+new_role10["movie_id"] = The_Dark_Knight_Rises["id"]
+new_role10["actor_id"] = Christian_Bale["id"]
+new_role10["character_name"] = "Bruce Wayne"
+new_role10.save
+#puts "There are #{Role.all.count} roles."
+
+new_role11 = Role.new
+new_role11["movie_id"] = The_Dark_Knight_Rises["id"]
+new_role11["actor_id"] = Gary_Oldman["id"]
+new_role11["character_name"] = "Commissioner Gordon"
+new_role11.save
+#puts "There are #{Role.all.count} roles."
+
+new_role12 = Role.new
+new_role12["movie_id"] = The_Dark_Knight_Rises["id"]
+new_role12["actor_id"] = Tom_Hardy["id"]
+new_role12["character_name"] = "Bane"
+new_role12.save
+#puts "There are #{Role.all.count} roles."
+
+new_role13 = Role.new
+new_role13["movie_id"] = The_Dark_Knight_Rises["id"]
+new_role13["actor_id"] = Joseph_Gordon_Levitt["id"]
+new_role13["character_name"] = "John Blake"
+new_role13.save
+#puts "There are #{Role.all.count} roles."
+
+new_role14 = Role.new
+new_role14["movie_id"] = The_Dark_Knight_Rises["id"]
+new_role14["actor_id"] = Anne_Hathaway["id"]
+new_role14["character_name"] = "Selina Kyle"
+new_role14.save
+#puts "There are #{Role.all.count} roles."
+# use "Selina Kyle" instead of new_role14 next time
 
 # Prints a header for the movies output
+puts ""
 puts "Movies"
 puts "======"
 puts ""
